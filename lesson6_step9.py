@@ -7,9 +7,9 @@ link = "https://suninjuly.github.io/registration2.html"
 
 try:
     browser.get(link)
-    fname = browser.find_element(By.XPATH, "//form/div[1]/div[1]/input").send_keys("Artem")
-    sname = browser.find_element(By.XPATH, "//form/div[1]/div[2]/input").send_keys("Artemov")
-    email = browser.find_element(By.XPATH, "//form/div[1]/div[3]/input").send_keys("testqa.artem@mail.com")
+    fname = browser.find_element(By.XPATH, "//div[contains (@class, 'first_block')]/div[contains (@class, 'first_class')]/input[contains (@class, 'first')]").send_keys("wasd")
+    sname = browser.find_element(By.XPATH, "//div[contains (@class, 'first_block')]/div[contains (@class, 'second_class')]/input[contains (@class, 'second')]").send_keys("wasd")
+    email = browser.find_element(By.XPATH, "//div[contains (@class, 'first_block')]/div[contains (@class, 'third_class')]/input[contains (@class, 'third')]").send_keys("testqa@mail.com")
     btn = browser.find_element(By.CLASS_NAME, "btn").click()
     welcomeText = browser.find_element(By.TAG_NAME, 'h1').text
     assert "Congratulations! You have successfully registered!" == welcomeText
